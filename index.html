@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>CyberTok - Neon Video Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00e6c7",
+                        "background-light": "#f9f9fa",
+                        "background-dark": "#0e0e11",
+                        "surface": "#1A1A1E",
+                        "accent-pink": "#FF3366",
+                        "card-dark": "#16161a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0e0e11;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .glass-nav {
+            background: rgba(14, 14, 17, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .video-gradient-overlay {
+            background: linear-gradient(0deg, rgba(14,14,17,0.9) 0%, rgba(14,14,17,0.4) 30%, rgba(0,0,0,0) 50%, rgba(14,14,17,0.4) 100%);
+        }
+        @keyframes rotate-vinyl {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-vinyl {
+            animation: rotate-vinyl 4s linear infinite;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .active-tab-indicator {
+            height: 3px;
+            background: #00e6c7;
+            box-shadow: 0 0 8px #00e6c7;
+        }
+        .teal-glow { box-shadow: 0 0 15px rgba(0, 230, 199, 0.2); }
+        .cyber-glow { box-shadow: 0 4px 20px -5px #00e6c7; }
+        
+        .app-container {
+            max-width: 430px;
+            margin: 0 auto;
+            height: 100vh;
+            position: relative;
+            background: #0e0e11;
+            overflow: hidden;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
